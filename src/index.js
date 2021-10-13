@@ -1,6 +1,7 @@
 import cardsFood from "./menu.json"
-import foodCardsTpl from "../templates/gallery_foods.hbs"
 
+import toggleTheme from "./createTheme"
+import createMurkupList from "./createMurkup"
 
 
 const listFoodEl = document.querySelector('.js-menu');
@@ -9,8 +10,11 @@ const listFoodEl = document.querySelector('.js-menu');
 const createMurkup = createMurkupList(cardsFood);
 listFoodEl.insertAdjacentHTML('afterbegin', createMurkup);
 
-function createMurkupList (cardsFood) {
-    return foodCardsTpl(cardsFood);
-}
+const sevedTheme = localStorage.getItem('createTheme');
+  document.body.classList.add('light-theme')
 
-console.log(listFoodEl);
+const toggleSwitchTheme = document.querySelector('#theme-switch-toggle')
+
+toggleSwitchTheme.addEventListener('click', toggleTheme);
+
+// сonsole.log(document.body.className);
