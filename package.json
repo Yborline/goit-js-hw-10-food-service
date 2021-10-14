@@ -1,5 +1,8 @@
 {
   "devDependencies": {
+    "@babel/cli": "^7.15.7",
+    "@babel/core": "^7.15.8",
+    "parcel-bundler": "^1.12.5",
     "sass": "^1.43.2"
   },
   "name": "goit-js-hw-10-food-service",
@@ -539,7 +542,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /goit-js-hw-10-food-service/",
+    "build": "parcel build src/*.html --public-url /Yborline/goit-js-hw-10-food-service/",
     "deploy": "gh-pages -d dist",
     "predeploy": "npm run build"
   },
