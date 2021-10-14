@@ -1,7 +1,6 @@
 {
   "devDependencies": {
-    "parcel": "^2.0.0-rc.0",
-    "sass": "^1.42.1"
+    "sass": "^1.43.2"
   },
   "name": "goit-js-hw-10-food-service",
   "version": "1.0.0",
@@ -275,6 +274,7 @@
     "jsbn": "^0.1.1",
     "jsdom": "^14.1.0",
     "jsesc": "^2.5.2",
+    "json": "^11.0.0",
     "json-parse-even-better-errors": "^2.3.1",
     "json-schema": "^0.2.3",
     "json-schema-traverse": "^0.4.1",
@@ -539,7 +539,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /goit-js-hw-10-food-service/"
+    "build": "parcel build src/*.html --public-url /goit-js-hw-10-food-service/",
+    "deploy": "gh-pages -d dist",
+    "predeploy": "npm run build"
   },
   "repository": {
     "type": "git",

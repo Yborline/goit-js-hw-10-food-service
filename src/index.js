@@ -10,8 +10,9 @@ const listFoodEl = document.querySelector('.js-menu');
 const createMurkup = createMurkupList(cardsFood);
 listFoodEl.insertAdjacentHTML('afterbegin', createMurkup);
 
-const sevedTheme = localStorage.getItem('createTheme');
-  document.body.classList.add('light-theme')
+const savedTheme = localStorage.getItem('createTheme');
+
+document.body.classList.add(savedTheme);
 
 const toggleSwitchTheme = document.querySelector('#theme-switch-toggle')
 

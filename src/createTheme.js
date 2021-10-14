@@ -1,10 +1,15 @@
  export default function toggleTheme() {
 
-    if (document.body.classList.contains('light-theme')) {
-       localStorage.setItem('createTheme' ,createDarkTheme())
+     if (document.body.classList.contains('light-theme')) {
+         createDarkTheme()
+         localStorage.removeItem('createTheme');
+         localStorage.setItem('createTheme', 'dark-theme');
+
+
     } else {
-        console.log(document.body.classList.contains('dark-theme'))
-       localStorage.setItem('createTheme' , createLightTheme()) 
+         createLightTheme();
+        localStorage.removeItem('createTheme');
+         localStorage.setItem('createTheme', 'light-theme')
     }
 }
 
